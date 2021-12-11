@@ -31,6 +31,6 @@ app.add_app("home", home.app)
 app.add_app("SOAL 1 A", soal1a.app)
 app.add_app("SOAL 1 B", soal1b.app)
 app.add_app("SOAL 1 C", soal1c.app)
-app.add_app("SOAL 1 D", dataframe.app)
+app.add_app("SOAL 1 D", soal1d.app)
 # The main app
 app.run()
