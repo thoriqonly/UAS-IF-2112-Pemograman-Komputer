@@ -13,7 +13,8 @@ import pandas as pd
 import plotly.express as px
 import json
 
-def app()
+def app():
+
     excel_file = 'produksi_minyak_mentah.csv'
 
     st.write('# Soal 1 D')
@@ -31,6 +32,10 @@ def app()
                 alpha3[idc] = x['country-code']
                 region[idc] = x['region']
                 subregion[idc] = x['sub-region']
+
+
+                
+
 
     df2 = pd.read_csv(excel_file)
     df2['produksi'].nlargest(1)
@@ -74,3 +79,10 @@ def app()
         st.dataframe(newfilter)
     st.markdown("<h3 style='text-align: left; color: white;'>Produksi Seluruh Tahun</h3>", unsafe_allow_html=True)
     st.dataframe(seluruhtahun)
+
+
+
+
+
+
+
