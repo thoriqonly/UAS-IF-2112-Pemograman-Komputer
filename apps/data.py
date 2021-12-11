@@ -33,8 +33,8 @@ def app():
     tahunx = frame3['tahun'].unique()
     negaraminyak2 = frame3['kode_negara'].unique()
     tahunminyak = frame3['tahun'].unique()
-    minyaktahun = st.multiselect('Tahun', options=tahunminyak,default=tahunminyak)
-    minyak_selection2 = st.multiselect('Negara:',options=negaraminyak2,default=negaraminyak2)
+    minyaktahun = st.multiselect("Tahun", tahunminyak,default=tahunminyak)
+    minyak_selection2 = st.multiselect("Negara:", negaraminyak2,default=negaraminyak2)
     filter2 =  (frame3['kode_negara'].isin(minyak_selection2) & frame3['tahun'].isin(minyaktahun))
     frame3 = frame3[filter2].groupby(by=['tahun']).sum()[["produksi"]].sort_values(by='produksi')
     bar_sum = px.bar(
