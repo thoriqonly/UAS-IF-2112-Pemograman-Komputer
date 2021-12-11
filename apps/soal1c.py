@@ -37,6 +37,6 @@ def app():
     frame4 = frame4[fil3].groupby(by=['kode_negara']).sum()[["produksi"]].sort_values(by='produksi')
 
     bar_country = px.bar(
-        frame4,x='produksi',y=frame4.index
+        frame4,x=frame4.index,y='produksi'
         )
     st.plotly_chart(bar_country)
