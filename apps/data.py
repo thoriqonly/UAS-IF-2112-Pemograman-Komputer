@@ -39,7 +39,6 @@ def app():
     bar_sum = px.bar(
         tx,x='produksi',y=frame3.index,
             orientation="h",
-            color_discrete_sequence=["#008388"] * len(frame3),
-            template="plotly_white"
+            color_discrete_sequence=["#008388"] * len(frame3)
         )
     st.plotly_chart(bar_sum)
