@@ -16,7 +16,7 @@ import json
 def app():
     excel_file = 'produksi_minyak_mentah.csv'
     
-    st.write('# Grafik Produksi Minyak')
+    st.write('# Grafik Produksi Minyak Setiap Negara')
 
     with open('kode_negara_lengkap.json') as f:
             data = json.load(f)
