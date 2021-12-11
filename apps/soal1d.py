@@ -14,7 +14,7 @@ import pandas as pd
 import plotly.express as px
 import json
 
-def app()
+def app():
     excel_file = 'produksi_minyak_mentah.csv'
 
     st.write('# Soal 1 D')
