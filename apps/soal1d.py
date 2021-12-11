@@ -13,8 +13,7 @@ import pandas as pd
 import plotly.express as px
 import json
 
-
-def app():
+def app()
     excel_file = 'produksi_minyak_mentah.csv'
 
     st.write('# Soal 1 D')
@@ -33,10 +32,6 @@ def app():
                 region[idc] = x['region']
                 subregion[idc] = x['sub-region']
 
-
-                
-
-
     df2 = pd.read_csv(excel_file)
     df2['produksi'].nlargest(1)
 
@@ -44,10 +39,17 @@ def app():
     negaraminyak = df2['kode_negara'].unique()
     minyak_selection = st.selectbox('Pilih :', negaraminyak)
 
-    st.write("Negara yang dipilih : ",names[minyak_selection])
-    st.write("Kode Negara: ",alpha3[minyak_selection])
-    st.write("Region :",region[minyak_selection])
-    st.write("Sub Region :",subregion[minyak_selection])
+
+    if minyak_selection in ('WLD','EU28','G20','OECD','OEU'):
+        st.write("Negara yang dipilih : ")
+        st.write("Kode Negara: ")
+        st.write("Region :")
+        st.write("Sub Region :")
+    else:
+        st.write("Negara yang dipilih : ",names[minyak_selection])
+        st.write("Kode Negara: ",alpha3[minyak_selection])
+        st.write("Region :",region[minyak_selection])
+        st.write("Sub Region :",subregion[minyak_selection])
 
     filterbanyak = df2[df2.kode_negara== minyak_selection]
     filterbanyak = filterbanyak.nlargest(1, columns='produksi')
