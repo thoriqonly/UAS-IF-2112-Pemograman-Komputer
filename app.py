@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import home, produksi, data, model 
+from apps import home, soal1a, soal1b, soal1c, soal1d 
 import streamlit as st
 import numpy as np
 import pandas as pd
