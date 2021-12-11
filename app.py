@@ -1,6 +1,19 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import home, produksi, data, model # import your app modules here
+from apps import home, produksi, data, model 
+import streamlit as st
+import numpy as np
+import pandas as pd
+from sklearn import datasets
+from logging import basicConfig
+from os import rename
+import numpy as np
+from pandas.core import indexing
+from pandas.core.indexes.base import Index
+import json
+import pandas as pd
+import plotly.express as px
+import json
 
 app = MultiApp()
 
