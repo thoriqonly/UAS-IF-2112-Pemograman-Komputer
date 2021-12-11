@@ -35,8 +35,6 @@ def app():
     minyaktahun = st.multiselect("Tahun",tahunminyak, default=tahunminyak)
     minyak_selection2 = st.multiselect("Negara:",negaraminyak2, default=negaraminyak2)
     filter2 =  (frame3['kode_negara'].isin(minyak_selection2) & frame3['tahun'].isin(minyaktahun))
-    tx = frame3[filter2].groupby(by=['tahun']).sum()[["produksi"]].sort_values(by='produksi')
-    bar_sum = px.bar(
-        tx,x='produksi',y=frame3.index
-        )
+    frame3 = frame3[filter2].groupby(by=['tahun']).sum()[["produksi"]].sort_values(by='produksi')
+    bar_sum = px.bar(tx,x='produksi',y=frame3.index)
     st.plotly_chart(bar_sum)
