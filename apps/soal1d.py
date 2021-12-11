@@ -67,17 +67,17 @@ def app():
 
     seluruhtahun = df2[df2.kode_negara== minyak_selection]
 
-    st.markdown("<h3 style='text-align: left; color: white;'>Tahun Terbanyak</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left; color: grey;'>Tahun Terbanyak</h3>", unsafe_allow_html=True)
     if filterbanyak['produksi'].unique() == 0:
         st.write('Tidak ada produksi')
     else:
         st.dataframe(filterbanyak)
-    st.markdown("<h3 style='text-align: left; color: white;'>Tahun Tersedikit</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left; color: grey;'>Tahun Tersedikit</h3>", unsafe_allow_html=True)
     if newfilter.empty:
         st.write('Tidak ada produksi')
     else:
         st.dataframe(newfilter)
-    st.markdown("<h3 style='text-align: left; color: white;'>Produksi Seluruh Tahun</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left; color: grey;'>Produksi Seluruh Tahun</h3>", unsafe_allow_html=True)
     st.dataframe(seluruhtahun)
 
 
