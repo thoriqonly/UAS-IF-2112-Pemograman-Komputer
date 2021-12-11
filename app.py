@@ -28,8 +28,9 @@ Nim : 00000000000
 
 # Add all your application here
 app.add_app("home", home.app)
-app.add_app("SOAL 1 A", produksi.app)
-app.add_app("SOAL 1 B", data.app)
-app.add_app("SOAL 1 C", model.app)
+app.add_app("SOAL 1 A", soal1a.app)
+app.add_app("SOAL 1 B", soal1b.app)
+app.add_app("SOAL 1 C", soal1c.app)
+app.add_app("SOAL 1 D", dataframe.app)
 # The main app
 app.run()
