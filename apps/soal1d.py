@@ -47,12 +47,12 @@ def app():
 
     if minyak_selection in ('WLD','EU28','G20','OECD','OEU'):
         st.write("Negara yang dipilih : ")
-        st.write("Kode Negara: ")
+        st.write("Kode Negara : ")
         st.write("Region :")
         st.write("Sub Region :")
     else:
         st.write("Negara yang dipilih : ",names[minyak_selection])
-        st.write("Kode Negara: ",alpha3[minyak_selection])
+        st.write("Kode Negara : ",alpha3[minyak_selection])
         st.write("Region :",region[minyak_selection])
         st.write("Sub Region :",subregion[minyak_selection])
 
