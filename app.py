@@ -20,9 +20,9 @@ app = MultiApp()
 st.markdown("""
 # SOAL UAS IF 2112 PEMROGAMAN KOMPUTER
 
-Nama : Siapa saja
+Nama : Thaariq Hasyim
 
-Nim : 00000000000
+Nim : 12220121
 
 """)
 
